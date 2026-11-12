@@ -1,0 +1,24 @@
+resources:
+  jobs:
+    claims_daily:
+      name: claims_daily
+      trigger:
+        pause_status: UNPAUSED
+        file_arrival:
+          url: /Volumes/claims/raw/landing/claims/
+      tasks:
+        - task_key: bronze
+          notebook_task:
+            notebook_path: /Workspace/Users/surajitm0nd0l12@gmail.com/Saffron_Shield/Saffron_Shield_dabs/src/bronze
+            source: WORKSPACE
+        - task_key: claims_pipeline
+          depends_on:
+            - task_key: bronze
+          pipeline_task:
+            pipeline_id: 70023ba7-41e8-4366-9388-90d38734a039
+      queue:
+        enabled: true
+      parameters:
+        - name: catalog
+          default: ${var.catalog}
+      performance_target: PERFORMANCE_OPTIMIZED

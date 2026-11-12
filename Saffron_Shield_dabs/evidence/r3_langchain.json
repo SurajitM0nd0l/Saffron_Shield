@@ -1,0 +1,18 @@
+{
+    "chat_databricks_reply": "A health insurance waiting period refers to the amount of time that must pass after enrolling in a health insurance plan before certain benefits or coverage become available, during which time the insured may not be able to receive reimbursement for medical expenses. This waiting period can vary in length depending on the insurance plan and the specific benefits, but it is typically a set number of days or months after the policy's effective date, after which the full range of coverage kicks in.",
+    "chat_openai_reply": "A health insurance waiting period refers to the amount of time that must pass after enrolling in a health insurance plan before certain benefits or coverage become available. During this waiting period, which can vary in length depending on the insurance plan and the specific benefits, the insured individual may not be able to receive coverage for certain medical services or treatments, or may be required to pay out-of-pocket for them.",
+    "waiting_facts": [
+        {
+            "document_name": "02_Waiting_Periods_Individual_Plans.md",
+            "plan_family": "individual",
+            "initial_waiting_days": 30,
+            "pre_existing_disease_waiting_months": 36
+        },
+        {
+            "document_name": "03_Waiting_Periods_Group_Plans.md",
+            "plan_family": "group",
+            "initial_waiting_days": 0,
+            "pre_existing_disease_waiting_months": 12
+        }
+    ]
+}

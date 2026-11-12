@@ -1,0 +1,177 @@
+Script started on Mon Nov  9 12:18:23 2026
+[1m[7m%[27m[1m[0m                                                                                ]7;file://SURAJIT.local/Users/surajit[0m[27m[24m[J(base) surajit@SURAJIT ~ % [K[?2004h[7mecho "===== CATALOG LISTING ====="[27m
+[7mdatabricks catalogs list --profile saffron[27m[K
+[K
+[7mecho "===== CREATE CLI CHECK FOLDER ====="[27m[K
+[7mdatabricks fs mkdirs dbfs:/Volumes/claims/raw/landing/cli_check/ --profile saffr[7mo[7mn[27m[K
+[K
+[7mecho "===== CREATE TEST FILE ====="[27m[K
+[7mecho "R5 CLI evidence upload test" > test_cli.txt[27m[K
+[K
+[7mecho "===== COPY FILE TO VOLUME ====="[27m[K
+[7mdatabricks fs cp test_cli.txt dbfs:/Volumes/claims/raw/landing/cli_check/cli_tes[7mt[7m.txt --profile saffron[27m[K
+[K
+[7mecho "===== VERIFY FILE ====="[27m[K
+[7mdatabricks fs ls dbfs:/Volumes/claims/raw/landing/cli_check/ --profile saffron[27m[K
+[K
+[7mecho "===== VERIFY JOB RUN ====="[27m[K
+[7mdatabricks jobs get-run 646040500218867 --profile saffron[27m[K[18A[30D[27me[27mc[27mh[27mo[27m [27m"[27m=[27m=[27m=[27m=[27m=[27m [27mC[27mA[27mT[27mA[27mL[27mO[27mG[27m [27mL[27mI[27mS[27mT[27mI[27mN[27mG[27m [27m=[27m=[27m=[27m=[27m=[27m"[1B[27md[27ma[27mt[27ma[27mb[27mr[27mi[27mc[27mk[27ms[27m [27mc[27ma[27mt[27ma[27ml[27mo[27mg[27ms[27m [27ml[27mi[27ms[27mt[27m [27m-[27m-[27mp[27mr[27mo[27mf[27mi[27ml[27me[27m [27ms[27ma[27mf[27mf[27mr[27mo[27mn[2B[27me[27mc[27mh[27mo[27m [27m"[27m=[27m=[27m=[27m=[27m=[27m [27mC[27mR[27mE[27mA[27mT[27mE[27m [27mC[27mL[27mI[27m [27mC[27mH[27mE[27mC[27mK[27m [27mF[27mO[27mL[27mD[27mE[27mR[27m [27m=[27m=[27m=[27m=[27m=[27m"[1B[27md[27ma[27mt[27ma[27mb[27mr[27mi[27mc[27mk[27ms[27m [27mf[27ms[27m [27mm[27mk[27md[27mi[27mr[27ms[27m [27md[27mb[27mf[27ms[27m:[27m/[27mV[27mo[27ml[27mu[27mm[27me[27ms[27m/[27mc[27ml[27ma[27mi[27mm[27ms[27m/[27mr[27ma[27mw[27m/[27ml[27ma[27mn[27md[27mi[27mn[27mg[27m/[27mc[27ml[27mi[27m_[27mc[27mh[27me[27mc[27mk[27m/[27m [27m-[27m-[27mp[27mr[27mo[27mf[27mi[27ml[27me[27m [27ms[27ma[27mf[27mf[27mro[27mn[2B[27me[27mc[27mh[27mo[27m [27m"[27m=[27m=[27m=[27m=[27m=[27m [27mC[27mR[27mE[27mA[27mT[27mE[27m [27mT[27mE[27mS[27mT[27m [27mF[27mI[27mL[27mE[27m [27m=[27m=[27m=[27m=[27m=[27m"[1B[27me[27mc[27mh[27mo[27m [27m"[27mR[27m5[27m [27mC[27mL[27mI[27m [27me[27mv[27mi[27md[27me[27mn[27mc[27me[27m [27mu[27mp[27ml[27mo[27ma[27md[27m [27mt[27me[27ms[27mt[27m"[27m [27m>[27m [27mt[27me[27ms[27mt[27m_[27mc[27ml[27mi[27m.[27mt[27mx[27mt[2B[27me[27mc[27mh[27mo[27m [27m"[27m=[27m=[27m=[27m=[27m=[27m [27mC[27mO[27mP[27mY[27m [27mF[27mI[27mL[27mE[27m [27mT[27mO[27m [27mV[27mO[27mL[27mU[27mM[27mE[27m [27m=[27m=[27m=[27m=[27m=[27m"[1B[27md[27ma[27mt[27ma[27mb[27mr[27mi[27mc[27mk[27ms[27m [27mf[27ms[27m [27mc[27mp[27m [27mt[27me[27ms[27mt[27m_[27mc[27ml[27mi[27m.[27mt[27mx[27mt[27m [27md[27mb[27mf[27ms[27m:[27m/[27mV[27mo[27ml[27mu[27mm[27me[27ms[27m/[27mc[27ml[27ma[27mi[27mm[27ms[27m/[27mr[27ma[27mw[27m/[27ml[27ma[27mn[27md[27mi[27mn[27mg[27m/[27mc[27ml[27mi[27m_[27mc[27mh[27me[27mc[27mk[27m/[27mc[27ml[27mi[27m_[27mt[27me[27mst[27m.[27mt[27mx[27mt[27m [27m-[27m-[27mp[27mr[27mo[27mf[27mi[27ml[27me[27m [27ms[27ma[27mf[27mf[27mr[27mo[27mn[2B[27me[27mc[27mh[27mo[27m [27m"[27m=[27m=[27m=[27m=[27m=[27m [27mV[27mE[27mR[27mI[27mF[27mY[27m [27mF[27mI[27mL[27mE[27m [27m=[27m=[27m=[27m=[27m=[27m"[1B[27md[27ma[27mt[27ma[27mb[27mr[27mi[27mc[27mk[27ms[27m [27mf[27ms[27m [27ml[27ms[27m [27md[27mb[27mf[27ms[27m:[27m/[27mV[27mo[27ml[27mu[27mm[27me[27ms[27m/[27mc[27ml[27ma[27mi[27mm[27ms[27m/[27mr[27ma[27mw[27m/[27ml[27ma[27mn[27md[27mi[27mn[27mg[27m/[27mc[27ml[27mi[27m_[27mc[27mh[27me[27mc[27mk[27m/[27m [27m-[27m-[27mp[27mr[27mo[27mf[27mi[27ml[27me[27m [27ms[27ma[27mf[27mf[27mr[27mo[27mn[2B[27me[27mc[27mh[27mo[27m [27m"[27m=[27m=[27m=[27m=[27m=[27m [27mV[27mE[27mR[27mI[27mF[27mY[27m [27mJ[27mO[27mB[27m [27mR[27mU[27mN[27m [27m=[27m=[27m=[27m=[27m=[27m"[1B[27md[27ma[27mt[27ma[27mb[27mr[27mi[27mc[27mk[27ms[27m [27mj[27mo[27mb[27ms[27m [27mg[27me[27mt[27m-[27mr[27mu[27mn[27m [27m6[27m4[27m6[27m0[27m4[27m0[27m5[27m0[27m0[27m2[27m1[27m8[27m8[27m6[27m7[27m [27m-[27m-[27mp[27mr[27mo[27mf[27mi[27ml[27me[27m [27ms[27ma[27mf[27mf[27mr[27mo[27mn[?2004l
+===== CATALOG LISTING =====
+]11;?\[6n[?25l[?2004h[92m⣽[0m loading...[K[92m⣻[0m loading...[K[92m⢿[0m loading...[K[92m⡿[0m loading...[K[92m⣟[0m loading...[K[92m⣯[0m loading...[K[92m⣷[0m loading...[K[92m⣾[0m loading...[K[92m⣽[0m loading...[K[92m⣻[0m loading...[K[92m⢿[0m loading...[K[92m⡿[0m loading...[K[92m⣟[0m loading...[K[92m⣯[0m loading...[K[92m⣷[0m loading...[K[92m⣾[0m loading...[K[92m⣽[0m loading...[K[92m⣻[0m loading...[K[92m⢿[0m loading...[K[92m⡿[0m loading...[K[92m⣟[0m loading...[K[92m⣯[0m loading...[K[92m⣷[0m loading...[K[92m⣾[0m loading...[K[92m⣽[0m loading...[K[92m⣻[0m loading...[K[92m⢿[0m loading...[K[92m⡿[0m loading...[K[92m⣟[0m loading...[K[92m⣯[0m loading...[K[92m⣷[0m loading...[K[92m⣾[0m loading...[K[92m⣽[0m loading...[K[92m⣻[0m loading...[K[92m⢿[0m loading...[K[92m⡿[0m loading...[K[92m⣟[0m loading...[K[92m⣯[0m loading...[K[92m⣷[0m loading...[K[92m⣾[0m loading...[K[92m⣽[0m loading...[K[92m⣻[0m loading...[K[92m⢿[0m loading...[K[92m⡿[0m loading...[K[92m⣟[0m loading...[K[92m⣯[0m loading...[K[92m⣷[0m loading...[K[92m⣾[0m loading...[K[92m⣽[0m loading...[K[92m⣻[0m loading...[K[92m⢿[0m loading...[K[92m⡿[0m loading...[K[92m⣟[0m loading...[K[92m⣯[0m loading...[K[92m⣷[0m loading...[K[92m⣾[0m loading...[K[92m⣽[0m loading...[K[92m⣻[0m loading...[K[92m⢿[0m loading...[K[92m⡿[0m loading...[K[92m⣟[0m loading...[K[92m⣯[0m loading...[K[92m⣷[0m loading...[K[92m⣾[0m loading...[K[92m⣽[0m loading...[K[92m⣻[0m loading...[K[92m⢿[0m loading...[K[92m⡿[0m loading...[K[92m⣟[0m loading...[K[92m⣯[0m loading...[K[92m⣷[0m loading...[K[92m⣾[0m loading...[K[92m⣽[0m loading...[K[92m⣻[0m loading...[K[92m⢿[0m loading...[K[92m⡿[0m loading...[K[92m⣟[0m loading...[K[92m⣯[0m loading...[K[92m⣷[0m loading...[K [K[2K[?2004l[?25h[?1002l[?1003l[?1006lError: Get "https://dbc-af5175d7-cbe7.cloud.databricks.com/api/2.1/unity-catalog/catalogs?max_results=0": EOF
+===== CREATE CLI CHECK FOLDER =====
+]11;?\[6n===== CREATE TEST FILE =====
+===== COPY FILE TO VOLUME =====
+]11;?\[6ntest_cli.txt -> dbfs:/Volumes/claims/raw/landing/cli_check/cli_test.txt
+===== VERIFY FILE =====
+]11;?\[6ncli_test.txt
+===== VERIFY JOB RUN =====
+]11;?\[6nError: Run 646040500218867 does not exist.
+[1m[7m%[27m[1m[0m                                                                                ]7;file://SURAJIT.local/Users/surajit[0m[27m[24m[J(base) surajit@SURAJIT ~ % [K[?2004h[7mWrite-Output "===== CATALOG LISTING ====="[27m
+[7mdatabricks catalogs list --profile saffron[27m[K
+[K[A[A[27C[27mW[27mr[27mi[27mt[27me[27m-[27mO[27mu[27mt[27mp[27mu[27mt[27m [27m"[27m=[27m=[27m=[27m=[27m=[27m [27mC[27mA[27mT[27mA[27mL[27mO[27mG[27m [27mL[27mI[27mS[27mT[27mI[27mN[27mG[27m [27m=[27m=[27m=[27m=[27m=[27m"[1B[27md[27ma[27mt[27ma[27mb[27mr[27mi[27mc[27mk[27ms[27m [27mc[27ma[27mt[27ma[27ml[27mo[27mg[27ms[27m [27ml[27mi[27ms[27mt[27m [27m-[27m-[27mp[27mr[27mo[27mf[27mi[27ml[27me[27m [27ms[27ma[27mf[27mf[27mr[27mo[27mn[1B[K[?2004l
+zsh: command not found: Write-Output
+]11;?\[6n[?25l[?2004h[92m⣽[0m loading...[K[92m⣻[0m loading...[K[92m⢿[0m loading...[K[92m⡿[0m loading...[K[92m⣟[0m loading...[K[92m⣯[0m loading...[K[92m⣷[0m loading...[K[92m⣾[0m loading...[K[92m⣽[0m loading...[K[92m⣻[0m loading...[K[34mName[0m                                                                                                                                                                                                                         [34mType[0m             [34mComment[0m
+[32mprod[0m                                                                                                                                                                                                                         [34mMANAGED_CATALOG[0m  
+[32mdev[0m                                                                                                                                                                                                                          [34mMANAGED_CATALOG[0m  
+[32msystem[0m                                                                                                                                                                                                                       [34mSYSTEM_CATALOG[0m   System catalog (auto-created)
+[32msamples[0m                                                                                                                                                                                                                      [34mSYSTEM_CATALOG[0m   These sample datasets are made available by third party data providers as well as open data sources. You can learn more about each data set by clicking on each one.
+[K
+To discover more instantly available, free data sets across a wide range of industry use cases, visit [Databricks Marketplace](/marketplace).
+[K
+Please note that the third party data sets represent a reduced portion of the available data attributes, volume, and data types available from providers, and are intended for educational rather than production purposes.
+[32mworkspace[0m                                                                                                                                                                                                                    [34mMANAGED_CATALOG[0m  
+[32muat[0m                                                                                                                                                                                                                          [34mMANAGED_CATALOG[0m  
+[32mfk_ce_2026_07_1382[0m                                                                                                                                                                                                           [34mMANAGED_CATALOG[0m  
+[32mfk_10[0m                                                                                                                                                                                                                        [34mMANAGED_CATALOG[0m  
+[32mglobal_airline[0m                                                                                                                                                                                                               [34mMANAGED_CATALOG[0m  DEV catalog for the Global Airline analytics platform.
+[32mvp_ce_2026_07_1382[0m                                                                                                                                                                                                           [34mMANAGED_CATALOG[0m  
+[32mclaims[0m                                                                                                                                                                                                                       [34mMANAGED_CATALOG[0m  
+ [K[2K[?2004l[?25h[?1002l[?1003l[?1006l[1m[7m%[27m[1m[0m                                                                                ]7;file://SURAJIT.local/Users/surajit[0m[27m[24m[J(base) surajit@SURAJIT ~ % [K[?2004h[7mdatabricks fs mkdirs dbfs:/Volumes/claims/raw/landing[7m/[7mcli_check/ --profile saffron[27m[K[A[27md[27ma[27mt[27ma[27mb[27mr[27mi[27mc[27mk[27ms[27m [27mf[27ms[27m [27mm[27mk[27md[27mi[27mr[27ms[27m [27md[27mb[27mf[27ms[27m:[27m/[27mV[27mo[27ml[27mu[27mm[27me[27ms[27m/[27mc[27ml[27ma[27mi[27mm[27ms[27m/[27mr[27ma[27mw[27m/[27ml[27ma[27mn[27md[27mi[27mn[27mg/[27mc[27ml[27mi[27m_[27mc[27mh[27me[27mc[27mk[27m/[27m [27m-[27m-[27mp[27mr[27mo[27mf[27mi[27ml[27me[27m [27ms[27ma[27mf[27mf[27mr[27mo[27mn[?2004l
+]11;?\[6nError: Put "https://dbc-af5175d7-cbe7.cloud.databricks.com/api/2.0/fs/directories/Volumes/claims/raw/landing/cli_check": net/http: TLS handshake timeout
+[1m[7m%[27m[1m[0m                                                                                ]7;file://SURAJIT.local/Users/surajit[0m[27m[24m[J(base) surajit@SURAJIT ~ % [K[?2004h[7mdatabricks fs mkdirs dbfs:/Volumes/claims/raw/landing[7m/[7mcli_check/ --profile saffron[27m[K[A[27md[27ma[27mt[27ma[27mb[27mr[27mi[27mc[27mk[27ms[27m [27mf[27ms[27m [27mm[27mk[27md[27mi[27mr[27ms[27m [27md[27mb[27mf[27ms[27m:[27m/[27mV[27mo[27ml[27mu[27mm[27me[27ms[27m/[27mc[27ml[27ma[27mi[27mm[27ms[27m/[27mr[27ma[27mw[27m/[27ml[27ma[27mn[27md[27mi[27mn[27mg/[27mc[27ml[27mi[27m_[27mc[27mh[27me[27mc[27mk[27m/[27m [27m-[27m-[27mp[27mr[27mo[27mf[27mi[27ml[27me[27m [27ms[27ma[27mf[27mf[27mr[27mo[27mn[?2004l
+]11;?\[6n[1m[7m%[27m[1m[0m                                                                                ]7;file://SURAJIT.local/Users/surajit[0m[27m[24m[J(base) surajit@SURAJIT ~ % [K[?2004h[7mecho "R5 CLI evidence upload test" > test_cli.txt[27m[49D[27me[27mc[27mh[27mo[27m [27m"[27mR[27m5[27m [27mC[27mL[27mI[27m [27me[27mv[27mi[27md[27me[27mn[27mc[27me[27m [27mu[27mp[27ml[27mo[27ma[27md[27m [27mt[27me[27ms[27mt[27m"[27m [27m>[27m [27mt[27me[27ms[27mt[27m_[27mc[27ml[27mi[27m.[27mt[27mx[27mt[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://SURAJIT.local/Users/surajit[0m[27m[24m[J(base) surajit@SURAJIT ~ % [K[?2004h[7mdatabricks fs cp test_cli.txt dbfs:/Volumes/claims/ra[7mw[7m/landing/cli_check/cli_test.txt --profile saffron[27m[K[A[23D[27md[27ma[27mt[27ma[27mb[27mr[27mi[27mc[27mk[27ms[27m [27mf[27ms[27m [27mc[27mp[27m [27mt[27me[27ms[27mt[27m_[27mc[27ml[27mi[27m.[27mt[27mx[27mt[27m [27md[27mb[27mf[27ms[27m:[27m/[27mV[27mo[27ml[27mu[27mm[27me[27ms[27m/[27mc[27ml[27ma[27mi[27mm[27ms[27m/[27mr[27maw[27m/[27ml[27ma[27mn[27md[27mi[27mn[27mg[27m/[27mc[27ml[27mi[27m_[27mc[27mh[27me[27mc[27mk[27m/[27mc[27ml[27mi[27m_[27mt[27me[27ms[27mt[27m.[27mt[27mx[27mt[27m [27m-[27m-[27mp[27mr[27mo[27mf[27mi[27ml[27me[27m [27ms[27ma[27mf[27mf[27mr[27mo[27mn[?2004l
+]11;?\[6ntest_cli.txt -> dbfs:/Volumes/claims/raw/landing/cli_check/cli_test.txt (skipped; already exists)
+[1m[7m%[27m[1m[0m                                                                                ]7;file://SURAJIT.local/Users/surajit[0m[27m[24m[J(base) surajit@SURAJIT ~ % [K[?2004h[7mdatabricks fs ls dbfs:/Volumes/claims/raw/landing/cli[7m_[7mcheck/ --profile saffron[27m[K[A[2C[27md[27ma[27mt[27ma[27mb[27mr[27mi[27mc[27mk[27ms[27m [27mf[27ms[27m [27ml[27ms[27m [27md[27mb[27mf[27ms[27m:[27m/[27mV[27mo[27ml[27mu[27mm[27me[27ms[27m/[27mc[27ml[27ma[27mi[27mm[27ms[27m/[27mr[27ma[27mw[27m/[27ml[27ma[27mn[27md[27mi[27mn[27mg[27m/[27mc[27ml[27mi_[27mc[27mh[27me[27mc[27mk[27m/[27m [27m-[27m-[27mp[27mr[27mo[27mf[27mi[27ml[27me[27m [27ms[27ma[27mf[27mf[27mr[27mo[27mn[?2004l
+]11;?\[6ncli_test.txt
+[1m[7m%[27m[1m[0m                                                                                ]7;file://SURAJIT.local/Users/surajit[0m[27m[24m[J(base) surajit@SURAJIT ~ % [K[?2004h[7mdatabricks jobs get-run 627471025332215 --profile saf[7mf[7mron[27m[K[A[23C[27md[27ma[27mt[27ma[27mb[27mr[27mi[27mc[27mk[27ms[27m [27mj[27mo[27mb[27ms[27m [27mg[27me[27mt[27m-[27mr[27mu[27mn[27m [27m6[27m2[27m7[27m4[27m7[27m1[27m0[27m2[27m5[27m3[27m3[27m2[27m2[27m1[27m5[27m [27m-[27m-[27mp[27mr[27mo[27mf[27mi[27ml[27me[27m [27ms[27ma[27mff[27mr[27mo[27mn[A[79C[1C[P[14Cfron [A[61C[P[15Cron [A[61C[P[16Con [A[61C[P[17Cn [K[A[61C[P[18C[K[1B[K[A[61C[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[7m6[7m4[7m6[7m0[7m4[7m0[7m5[7m0[7m0[7m2[7m1[7m8[7m8[7m6[7m7[27m --profile saffron[K[A[62C[15D[27m6[27m4[27m6[27m0[27m4[27m0[27m5[27m0[27m0[27m2[27m1[27m8[27m8[27m6[27m7[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1B[1C[1C[1C[1C[?2004l
+]11;?\[6nError: Run 646040500218867 does not exist.
+[1m[7m%[27m[1m[0m                                                                                ]7;file://SURAJIT.local/Users/surajit[0m[27m[24m[J(base) surajit@SURAJIT ~ % [K[?2004h[7mdatabricks jobs get-run 627471025332215 --profile saf[7mf[7mron[27m[K[A[23C[27md[27ma[27mt[27ma[27mb[27mr[27mi[27mc[27mk[27ms[27m [27mj[27mo[27mb[27ms[27m [27mg[27me[27mt[27m-[27mr[27mu[27mn[27m [27m6[27m2[27m7[27m4[27m7[27m1[27m0[27m2[27m5[27m3[27m3[27m2[27m2[27m1[27m5[27m [27m-[27m-[27mp[27mr[27mo[27mf[27mi[27ml[27me[27m [27ms[27ma[27mff[27mr[27mo[27mn[A[79C[P[15Cfron [A[60C[P[16Cron [A[60C[1C[P[16Con [A[61C[P[17Cn [K[A[61C[P[18C[K[1B[K[A[61C[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[7m1[7m0[7m5[7m5[7m8[7m8[7m4[7m9[7m7[7m1[7m7[7m9[7m1[7m8[7m0[7m1[27m --profile saffron[K[A[62C[16D[27m1[27m0[27m5[27m5[27m8[27m8[27m4[27m9[27m7[27m1[27m7[27m9[27m1[27m8[27m0[27m1[1C[?2004l[1B
+]11;?\[6n{
+  [34;1m"cleanup_duration"[0m: [36m0[0m,
+  [34;1m"creator_user_name"[0m: [32m"surajitm0nd0l12@gmail.com"[0m,
+  [34;1m"effective_performance_target"[0m: [32m"PERFORMANCE_OPTIMIZED"[0m,
+  [34;1m"end_time"[0m: [36m1794206373222[0m,
+  [34;1m"execution_duration"[0m: [36m0[0m,
+  [34;1m"job_id"[0m: [36m646040500218867[0m,
+  [34;1m"job_parameters"[0m: [
+    {
+      [34;1m"default"[0m: [32m"claims"[0m,
+      [34;1m"name"[0m: [32m"catalog"[0m
+    }
+  ],
+  [34;1m"job_run_id"[0m: [36m1055884971791801[0m,
+  [34;1m"number_in_job"[0m: [36m1055884971791801[0m,
+  [34;1m"original_attempt_run_id"[0m: [36m1055884971791801[0m,
+  [34;1m"run_duration"[0m: [36m122669[0m,
+  [34;1m"run_id"[0m: [36m1055884971791801[0m,
+  [34;1m"run_name"[0m: [32m"[dev surajitm0nd0l12] claims_daily"[0m,
+  [34;1m"run_page_url"[0m: [32m"https://dbc-af5175d7-cbe7.cloud.databricks.com/?o=7474647701810429#job/646040500218867/run/1055884971791801"[0m,
+  [34;1m"run_type"[0m: [32m"JOB_RUN"[0m,
+  [34;1m"setup_duration"[0m: [36m0[0m,
+  [34;1m"start_time"[0m: [36m1794206250553[0m,
+  [34;1m"state"[0m: {
+    [34;1m"life_cycle_state"[0m: [32m"TERMINATED"[0m,
+    [34;1m"result_state"[0m: [32m"SUCCESS"[0m,
+    [34;1m"state_message"[0m: [32m""[0m,
+    [34;1m"user_cancelled_or_timedout"[0m: [31mfalse[0m
+  },
+  [34;1m"status"[0m: {
+    [34;1m"state"[0m: [32m"TERMINATED"[0m,
+    [34;1m"termination_details"[0m: {
+      [34;1m"code"[0m: [32m"SUCCESS"[0m,
+      [34;1m"message"[0m: [32m""[0m,
+      [34;1m"type"[0m: [32m"SUCCESS"[0m
+    }
+  },
+  [34;1m"tasks"[0m: [
+    {
+      [34;1m"attempt_number"[0m: [36m0[0m,
+      [34;1m"cleanup_duration"[0m: [36m0[0m,
+      [34;1m"depends_on"[0m: [
+        {
+          [34;1m"task_key"[0m: [32m"bronze"[0m
+        }
+      ],
+      [34;1m"effective_performance_target"[0m: [32m"PERFORMANCE_OPTIMIZED"[0m,
+      [34;1m"end_time"[0m: [36m1794206373014[0m,
+      [34;1m"execution_duration"[0m: [36m101000[0m,
+      [34;1m"pipeline_task"[0m: {
+        [34;1m"pipeline_id"[0m: [32m"70023ba7-41e8-4366-9388-90d38734a039"[0m
+      },
+      [34;1m"run_id"[0m: [36m525255010035512[0m,
+      [34;1m"run_if"[0m: [32m"ALL_SUCCESS"[0m,
+      [34;1m"run_page_url"[0m: [32m"https://dbc-af5175d7-cbe7.cloud.databricks.com/?o=7474647701810429#job/646040500218867/run/525255010035512"[0m,
+      [34;1m"setup_duration"[0m: [36m0[0m,
+      [34;1m"start_time"[0m: [36m1794206271024[0m,
+      [34;1m"state"[0m: {
+        [34;1m"life_cycle_state"[0m: [32m"TERMINATED"[0m,
+        [34;1m"result_state"[0m: [32m"SUCCESS"[0m,
+        [34;1m"state_message"[0m: [32m""[0m,
+        [34;1m"user_cancelled_or_timedout"[0m: [31mfalse[0m
+      },
+      [34;1m"status"[0m: {
+        [34;1m"state"[0m: [32m"TERMINATED"[0m,
+        [34;1m"termination_details"[0m: {
+          [34;1m"code"[0m: [32m"SUCCESS"[0m,
+          [34;1m"message"[0m: [32m""[0m,
+          [34;1m"type"[0m: [32m"SUCCESS"[0m
+        }
+      },
+      [34;1m"task_key"[0m: [32m"claims_pipeline"[0m
+    },
+    {
+      [34;1m"attempt_number"[0m: [36m0[0m,
+      [34;1m"cleanup_duration"[0m: [36m1000[0m,
+      [34;1m"effective_performance_target"[0m: [32m"PERFORMANCE_OPTIMIZED"[0m,
+      [34;1m"end_time"[0m: [36m1794206270623[0m,
+      [34;1m"execution_duration"[0m: [36m17000[0m,
+      [34;1m"notebook_task"[0m: {
+        [34;1m"notebook_path"[0m: [32m"/Workspace/Users/surajitm0nd0l12@gmail.com/Saffron_Shield/Saffron_Shield_dabs/src/bronze"[0m,
+        [34;1m"source"[0m: [32m"WORKSPACE"[0m
+      },
+      [34;1m"run_id"[0m: [36m520808298095373[0m,
+      [34;1m"run_if"[0m: [32m"ALL_SUCCESS"[0m,
+      [34;1m"run_page_url"[0m: [32m"https://dbc-af5175d7-cbe7.cloud.databricks.com/?o=7474647701810429#job/646040500218867/run/520808298095373"[0m,
+      [34;1m"setup_duration"[0m: [36m2000[0m,
+      [34;1m"start_time"[0m: [36m1794206250578[0m,
+      [34;1m"state"[0m: {
+        [34;1m"life_cycle_state"[0m: [32m"TERMINATED"[0m,
+        [34;1m"result_state"[0m: [32m"SUCCESS"[0m,
+        [34;1m"state_message"[0m: [32m""[0m,
+        [34;1m"user_cancelled_or_timedout"[0m: [31mfalse[0m
+      },
+      [34;1m"status"[0m: {
+        [34;1m"state"[0m: [32m"TERMINATED"[0m,
+        [34;1m"termination_details"[0m: {
+          [34;1m"code"[0m: [32m"SUCCESS"[0m,
+          [34;1m"message"[0m: [32m""[0m,
+          [34;1m"type"[0m: [32m"SUCCESS"[0m
+        }
+      },
+      [34;1m"task_key"[0m: [32m"bronze"[0m
+    }
+  ],
+  [34;1m"trigger"[0m: [32m"FILE_ARRIVAL"[0m
+}
+[1m[7m%[27m[1m[0m                                                                                ]7;file://SURAJIT.local/Users/surajit[0m[27m[24m[J(base) surajit@SURAJIT ~ % [K[?2004hSStop-Transcript[?2004l
+zsh: command not found: Stop-Transcript
+[1m[7m%[27m[1m[0m                                                                                ]7;file://SURAJIT.local/Users/surajit[0m[27m[24m[J(base) surajit@SURAJIT ~ % [K[?2004heexit[?2004l
+
+Saving session...
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+Deleting expired sessions...       3 completed.
+
+Script done on Mon Nov  9 12:27:40 2026
