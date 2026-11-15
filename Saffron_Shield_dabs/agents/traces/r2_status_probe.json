@@ -1,0 +1,13 @@
+{
+    "trace_id": "tr-a11711e92404d1fd170a2f0111f95b41",
+    "tool_calls": [
+        {
+            "name": "claims.genai.lookup_claim",
+            "args": {
+                "claim_id": "CLM-10042"
+            }
+        }
+    ],
+    "final_answer": "No claim record was found for CLM-10042 in claims.gold.claims_enriched.",
+    "cited_chunk_ids": []
+}

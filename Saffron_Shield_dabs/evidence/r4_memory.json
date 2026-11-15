@@ -1,0 +1,54 @@
+{
+    "backend": "lakebase",
+    "user_id": "adjuster.demo@saffronshield.example",
+    "sessions": [
+        {
+            "session": 1,
+            "thread_id": "memory-session-1",
+            "turns": [
+                {
+                    "turn": 1,
+                    "question": "I am reviewing claim CLM-10556. What is its status?",
+                    "answer": "The status of claim CLM-10556 is \"settled\".",
+                    "tool_calls": [
+                        "claims__genai__lookup_claim"
+                    ],
+                    "thread_messages_before": 0
+                },
+                {
+                    "turn": 2,
+                    "question": "Save a note on this claim: the hospital billing desk gave me reference ADJ-2219 and promised the final bill within 5 days.",
+                    "answer": "The note has been saved successfully. The note ID is 4, and it was created at 10:43:52 UTC on November 15, 2026.",
+                    "tool_calls": [
+                        "save_note"
+                    ],
+                    "thread_messages_before": 4
+                },
+                {
+                    "turn": 3,
+                    "question": "Which claim did I just save a note on?",
+                    "answer": "You just saved a note on claim CLM-10556.",
+                    "tool_calls": [
+                        "recall_notes"
+                    ],
+                    "thread_messages_before": 8
+                }
+            ]
+        },
+        {
+            "session": 2,
+            "thread_id": "memory-session-2",
+            "turns": [
+                {
+                    "turn": 1,
+                    "question": "What reference did the hospital billing desk give me for claim CLM-10556?",
+                    "answer": "The hospital billing desk gave you reference ADJ-2219 for claim CLM-10556 and promised the final bill within 5 days.",
+                    "tool_calls": [
+                        "recall_notes"
+                    ],
+                    "thread_messages_before": 0
+                }
+            ]
+        }
+    ]
+}

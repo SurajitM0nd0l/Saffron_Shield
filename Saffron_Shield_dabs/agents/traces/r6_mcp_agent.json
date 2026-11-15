@@ -1,0 +1,13 @@
+{
+    "trace_id": "tr-ed4ef3c761971942972760c0e0f0152c",
+    "tool_calls": [
+        {
+            "name": "claims__genai__lookup_claim",
+            "args": {
+                "claim_id": "CLM-20003"
+            }
+        }
+    ],
+    "final_answer": "The status of claim CLM-20003 is \"submitted\". It was for a cashless claim, and the admission date was 2026-01-20, with a discharge date of 2026-01-25. The billed amount was 240000.0. The claim is under the SILVER_IND plan, which is an individual plan. The room rent per day was 5000, with a room rent cap per day of 3000, and there was an amount over the cap. The policy started on 2024-06-01, and at the time of admission, the policy had been active for 19 months and 598 days. The hospital was part of the network at the time of admission.",
+    "cited_chunk_ids": []
+}

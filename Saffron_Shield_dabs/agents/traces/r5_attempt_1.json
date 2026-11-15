@@ -1,0 +1,49 @@
+{
+    "question": "For CLM-20003: which plan applied, is room rent over cap, and what is payable?",
+    "attempt": 1,
+    "trace_id": "tr-6a964e186b0f247a9c558a17bf6360d7",
+    "route": [
+        "data",
+        "policy",
+        "adjudication",
+        "verifier"
+    ],
+    "specialists": {
+        "data": {
+            "tool_calls": [
+                "lookup_claim",
+                "plan_at"
+            ]
+        },
+        "policy": {
+            "tool_calls": [
+                "search_policy"
+            ],
+            "cited_chunk_ids": [
+                "04_Room_Rent_Capping_and_Proportionate_Deduction.md#which-cap-applies",
+                "04_Room_Rent_Capping_and_Proportionate_Deduction.md#proportionate-deduction",
+                "04_Room_Rent_Capping_and_Proportionate_Deduction.md#room-rent-caps-by-plan",
+                "04_Room_Rent_Capping_and_Proportionate_Deduction.md#room-categories"
+            ]
+        },
+        "adjudication": {
+            "tool_calls": [
+                "compute_payable"
+            ]
+        }
+    },
+    "verifier": {
+        "agrees": true
+    },
+    "verdict": {
+        "plan_code": "SILVER_IND",
+        "payable": true,
+        "waiting_period_ok": true,
+        "network_at_admission": true,
+        "room_rent_over_cap": true,
+        "room_rent_deduction_pct": 40.0,
+        "copay_pct": 0,
+        "reason_code": "PAYABLE_WITH_DEDUCTION",
+        "payable_amount": 144000.0
+    }
+}
